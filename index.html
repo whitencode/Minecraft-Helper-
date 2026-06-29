@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Helper</title>
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis:YEAR@1979&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="bck">
+        <div class="header-top">
+            <button id="lang-toggle" class="lang-toggle" type="button" aria-label="Switch language">
+                <span class="lang-option active" data-lang="ru">RU</span>
+                <span class="lang-separator">/</span>
+                <span class="lang-option" data-lang="en">EN</span>
+            </button>
+        </div>
+
+        <h1 id="title">
+            ТВОЙ <span id="highlight">MINECRAFT</span><br>
+            <span id="highlight2">ПОМОЩНИК</span>
+        </h1>
+
+        <p id="subtitle">
+            Хочешь построить автоматическую ферму, но устал искать среди
+            сотен некачественых уроков? Мы собрали только рабочие и
+            актуальные фермы в одном месте!
+        </p>
+    </header>
+
+    <div class="search-container">
+        <input id="search-input" type="text" placeholder="Поиск по фермам..." class="search-input">
+    </div>
+
+    <div class="card-container"></div>
+
+    <footer class="footer-text">
+        <span id="footer-line-1">Minecraft Helper © 2026</span><br>
+        <span id="footer-line-2">Не является официальным проектом Minecraft или Mojang.</span>
+    </footer>
+    <script src="script/script.js"></script>
+</body>
+</html>

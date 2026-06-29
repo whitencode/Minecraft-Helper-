@@ -1,0 +1,298 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #263238;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUpDelayed {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes cardReveal {
+    from {
+        opacity: 0;
+        transform: translateY(24px) scale(0.98);
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.bck {
+    position: relative;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+        ),
+        url("../images/bg.png");
+
+    background-size: cover;
+    background-position: center;
+
+    min-height: 500px;
+    padding: 24px 20px 40px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-top {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 999px;
+    background: rgba(38, 50, 56, 0.8);
+    color: #fff;
+    padding: 8px 12px;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.lang-toggle:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255,255,255,0.7);
+    background: rgba(38, 50, 56, 0.95);
+}
+
+.lang-option {
+    opacity: 0.7;
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.lang-option.active {
+    opacity: 1;
+    color: #2BFF00;
+}
+
+.lang-separator {
+    opacity: 0.7;
+}
+
+#title {
+    font-family: 'Climate Crisis', sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 4px 12px rgba(0,0,0,.4);
+    width: min(844px, 100%);
+    margin: 0;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;
+}
+
+#highlight {
+    font-family: 'Climate Crisis', sans-serif;
+    color: rgb(61, 212, 71);
+}
+
+#highlight2 {
+    font-family: 'Climate Crisis', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-left: 100px;
+}
+
+#subtitle {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px black;
+    text-align: center;
+    max-width: 940px;
+    margin: 18px 0 0;
+    animation: fadeInUpDelayed 1s ease-out;
+}
+
+.card {
+    font-family: 'Comfortaa', sans-serif;
+    background-color: #3E4348;
+    width: 350px;
+    height: auto;
+    padding: 14px 14px 18px;
+    border-radius: 10px;
+    border: 1px solid #ffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #fff;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    opacity: 0;
+    animation: cardReveal 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-delay: var(--card-delay, 0ms);
+    will-change: transform, opacity, filter;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    gap: 110px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 30px 24px;
+    margin: 0;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0,0,0,.45);
+}
+
+.card:hover .card-image {
+    transform: scale(1.03);
+}
+
+.card-name {
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 32px;
+    margin: 2px 0 0;
+    text-align: center;
+}
+
+.card-author,
+.card-difficulty,
+.card-earning,
+.card-version {
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.card-author {
+    color: #2BFF00;
+}
+
+.card-button {
+    font-family: 'Comfortaa', sans-serif;
+    border: 1px solid #ffff;
+    background: #27992B;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px 16px;
+    margin-top: 4px;
+    cursor: pointer;
+    width: 85%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.card-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,.25);
+}
+
+.card-button:active {
+    transform: translateY(0);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.25s ease;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(520px, calc(100% - 32px));
+    margin: 24px auto 0;
+    padding: 14px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 18px;
+    background: rgba(62, 67, 72, 0.72);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.search-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.34);
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.search-container input {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: rgba(38, 50, 56, 0.95);
+    color: #fff;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 16px;
+    outline: none;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.search-container input:focus {
+    border-color: #2BFF00;
+    box-shadow: 0 0 0 3px rgba(43, 255, 0, 0.15);
+    transform: translateY(-1px);
+}
+
+.empty-state {
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: 'Comfortaa', sans-serif;
+    padding: 24px 0;
+}
+
+.footer-text {
+    font-family: 'Comfortaa', sans-serif;
+    color: #fff;
+    text-align: center;
+    padding: 24px 16px;
+    border-top: 1px solid #ffff;
+    box-shadow: 0 -4px 12px rgba(0,0,0,.4);
+}

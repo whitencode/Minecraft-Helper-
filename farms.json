@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Пшеничная ферма",
+    "titleEn": "Wheat Farm",
+    "author": "pioner",
+    "difficulty": "Легко",
+    "difficultyEn": "Easy",
+    "earning": "Пшеница",
+    "earningEn": "Wheat",
+    "version": "1.21+",
+    "image": "images/wheat.webp"
+  },
+  {
+    "title": "Железная ферма",
+    "titleEn": "Iron Farm",
+    "author": "pioner",
+    "difficulty": "Средне",
+    "difficultyEn": "Medium",
+    "earning": "Железо",
+    "earningEn": "Iron",
+    "version": "1.21+",
+    "image": "images/iron.webp"
+  },
+  {
+    "title": "Ферма опыта",
+    "titleEn": "XP Farm",
+    "author": "pioner",
+    "difficulty": "Сложно",
+    "difficultyEn": "Hard",
+    "earning": "Опыт",
+    "earningEn": "XP",
+    "version": "1.21+",
+    "image": "images/xp.webp"
+  },
+  {
+    "title": "Тростниковая ферма",
+    "titleEn": "Sugar Cane Farm",
+    "author": "pioner",
+    "difficulty": "Легко",
+    "difficultyEn": "Easy",
+    "earning": "Тростник",
+    "earningEn": "Sugar Cane",
+    "version": "1.21+",
+    "image": "images/cane.webp"
+  }
+]
